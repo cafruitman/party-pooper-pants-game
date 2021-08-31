@@ -2,11 +2,12 @@ import express from 'express'
 import mongoose from 'mongoose'
 import Questions from './dbQuestions.js'
 import Cors from 'cors'
+import password from './dbPassword.js'
 
 //App Config
 const app = express()
 const port = 3000
-const connection_url = `mongodb+srv://admin:CVjhdmLsePKg2VKs@cluster0.lwnk7.mongodb.net/partypooperpantsdb?retryWrites=true&w=majority`
+const connection_url = `mongodb+srv://admin:${password}@cluster0.lwnk7.mongodb.net/partypooperpantsdb?retryWrites=true&w=majority`
 
 //Middlewares
 app.use(express.json())
